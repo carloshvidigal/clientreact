@@ -1,8 +1,9 @@
 import React from 'react';
-
+import './Global.css'
+import Routes from './routes';
 
 export default function App() {
-  return (<h1>ChNet</h1>
+  return (
+    <Routes />
   );
 }
-
