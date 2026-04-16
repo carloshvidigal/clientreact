@@ -2,15 +2,14 @@ import React, {useState} from 'react';
 import './styles.css'
 import logoImage from '../../assets/login.png';
 import api from '../../services/api';
-import {useHistory} from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() { 
     
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
     async function login(event){
         event.preventDefault();
@@ -25,7 +24,7 @@ export default function Login() {
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('expiration', response.data.expiration);
 
-            history.push('/alunos');
+            navigate.push('/alunos');
 
         }catch(error){
             alert('O login falhou ' + error)
