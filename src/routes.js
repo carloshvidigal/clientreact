@@ -12,7 +12,7 @@ export default function AppRoutes() {
             <Routes>
                 <Route path="/" element={<Login />} />                
                 <Route path="/alunos" element={<Alunos />} />
-                <Route path="/aluno/novo/:alunoid" element={<NovoAluno />} />               
+                <Route path="/aluno/novo/:alunoId" element={<NovoAluno />} />               
             </Routes>
         </BrowserRouter>
     );
